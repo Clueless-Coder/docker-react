@@ -28,7 +28,7 @@ node {
          * First, the incremental build number from Jenkins
          * Second, the 'latest' tag.
          * Pushing multiple tags is cheap, as all the layers are reused. */
-        docker.withRegistry('cluelesscoder/default', '12') {
+        docker.withRegistry('https://registry.hub.docker.com', '12') {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
         }
