@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("frontend_web")
+        app = docker.build("cluelesscoder/default:frontend_web")
     }
 
     stage('Test image') {
